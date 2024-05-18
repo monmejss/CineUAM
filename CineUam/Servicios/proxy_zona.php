@@ -1,5 +1,4 @@
 <?php
-// proxy_sucursal_zona.php
 class ProxySucursalZona {
     private static $instancia;
     private $conexion;
