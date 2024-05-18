@@ -88,38 +88,41 @@
     </button>
     </div>
 
-    <!-- Cartelera -->
+<!-- Cartelera -->
 <section class="cartelera_section layout_padding">
-        <div class="container">
-            <h2 class="section_heading">Cartelera</h2>
-            <div class="row">
-                <?php
-                include_once("../Controlador/ControladorCartelera.php");
+    <div class="container">
+        <h2 class="section_heading text-center mb-5">Cartelera</h2>
+        <div class="row g-4">
+            <?php
+            include_once("../Controlador/ControladorCartelera.php");
 
-                // Instanciar el controlador de la cartelera
-                $controladorCartelera = new ControladorCartelera();
+            // Instanciar el controlador de la cartelera
+            $controladorCartelera = new ControladorCartelera();
 
-                // Obtener las funciones de la cartelera
-                $funciones = $controladorCartelera->getFunciones();
+            // Obtener las funciones de la cartelera
+            $funciones = $controladorCartelera->getFunciones();
 
-                // Mostrar cada función en la cartelera
-                foreach ($funciones as $funcion) {
-                    echo "<div class='col-md-4'>";
-                    echo "<div class='funcion_card'>";
-                    echo "<img src='" . $funcion->getPelicula()->getImagenPelicula() . "' class='img-fluid' alt=''>";
-                    echo "<div class='funcion_info'>";
-                    echo "<h3>" . $funcion->getPelicula()->getNombre() . "</h3>";
-                    echo "<p>" . $funcion->getHorario()->getFechaHora() . "</p>";
-                    echo "<p>" . $funcion->getSala()->getTipo() . "</p>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-                ?>
-            </div>
+            // Mostrar cada función en la cartelera
+            foreach ($funciones as $funcion) {
+                echo "<div class='col-md-6 col-lg-4'>";
+                echo "<div class='card h-100'>";
+                echo "<img src='" . $funcion->getPelicula()->getImagenPelicula() . "' class='card-img-top' alt=''>";
+                echo "<div class='card-body'>";
+                echo "<h5 class='card-title'>" . $funcion->getPelicula()->getNombre() . "</h5>";
+                echo "<p class='card-text'><strong>Género:</strong> " . $funcion->getPelicula()->getGenero() . "</p>";
+                echo "<p class='card-text'><strong>Duración:</strong> " . $funcion->getPelicula()->getDuracion() . " min</p>";
+                echo "</div>";
+                echo "<div class='card-footer text-center'>";
+                echo "<a href='#' class='btn btn-primary'>Comprar Boleto</a>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+            }
+            ?>
         </div>
-    </section>
-    <!-- End Cartelera -->
+    </div>
+</section>
+<!-- End Cartelera -->
 
     <!-- about section -->
     <section class="about_section layout_padding">
