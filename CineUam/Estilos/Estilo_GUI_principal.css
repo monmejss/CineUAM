@@ -227,7 +227,7 @@ h5 {
 .cartelera_section .card-footer .btn {
     font-size: 18px;
     padding: 10px 20px;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Imagenes */
@@ -239,8 +239,8 @@ h5 {
 
 /* Color del boton */
 .btn-primary {
-    background-color: #e0c0a5;
-    border-color: #e0c0a5;
+    background-color: #f5a907;
+    border-color: #f5a907;
     /*border-width: 2.5px;*/
 }
 
