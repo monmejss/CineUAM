@@ -241,7 +241,7 @@ h5 {
 .btn-primary {
     background-color: #e0c0a5;
     border-color: #e0c0a5;
-    border-width: 2.5px;
+    /*border-width: 2.5px;*/
 }
 
 /* Color del botón al pasar el cursor por encima */
@@ -249,5 +249,5 @@ h5 {
     background-color: #f27602;
     border-color: #f27602;
     color: #ffffff;
-    border-width: 2.5px;
+    /*border-width: 2.5px;*/
 }
