@@ -239,6 +239,15 @@ h5 {
 
 /* Color del boton */
 .btn-primary {
-    background-color: #e69c00;
-    border-color: #e69c00;
+    background-color: #e0c0a5;
+    border-color: #e0c0a5;
+    border-width: 2.5px;
+}
+
+/* Color del botón al pasar el cursor por encima */
+.btn-primary:hover {
+    background-color: #f27602;
+    border-color: #f27602;
+    color: #ffffff;
+    border-width: 2.5px;
 }
